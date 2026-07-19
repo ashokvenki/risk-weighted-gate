@@ -1,0 +1,28 @@
+{
+  "findings": [
+    {
+      "cve_id": "CVE-2018-18074",
+      "package": "requests",
+      "version": "2.18.4",
+      "cvss_score": 9.8,
+      "epss_score": 0.003,
+      "cwe_id": "CWE-295"
+    },
+    {
+      "cve_id": "CVE-2021-34552",
+      "package": "Pillow",
+      "version": "8.1.0",
+      "cvss_score": 9.8,
+      "epss_score": 0.421,
+      "cwe_id": "CWE-120"
+    },
+    {
+      "cve_id": "CVE-2021-44420",
+      "package": "Django",
+      "version": "2.2.0",
+      "cvss_score": 7.3,
+      "epss_score": 0.002,
+      "cwe_id": "CWE-22"
+    }
+  ]
+}
