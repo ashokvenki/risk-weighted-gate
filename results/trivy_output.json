@@ -1,0 +1,2188 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.69.3"
+  },
+  "ReportID": "019f7a6b-c37c-7ad1-aebf-ce58abbcd79a",
+  "CreatedAt": "2026-07-19T14:48:30.588712+02:00",
+  "ArtifactName": "corpus",
+  "ArtifactType": "filesystem",
+  "Results": [
+    {
+      "Target": "requirements.txt",
+      "Class": "lang-pkgs",
+      "Type": "pip",
+      "Packages": [
+        {
+          "Name": "Jinja2",
+          "Identifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "Version": "2.10.0",
+          "Locations": [
+            {
+              "StartLine": 3,
+              "EndLine": 3
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "Werkzeug",
+          "Identifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "Version": "0.15.0",
+          "Locations": [
+            {
+              "StartLine": 5,
+              "EndLine": 5
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "cryptography",
+          "Identifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "Version": "2.3.0",
+          "Locations": [
+            {
+              "StartLine": 1,
+              "EndLine": 1
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "paramiko",
+          "Identifier": {
+            "PURL": "pkg:pypi/paramiko@2.4.1",
+            "UID": "b93319cba5c5d40"
+          },
+          "Version": "2.4.1",
+          "Locations": [
+            {
+              "StartLine": 2,
+              "EndLine": 2
+            }
+          ],
+          "AnalyzedBy": "pip"
+        },
+        {
+          "Name": "pyyaml",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyyaml@3.12",
+            "UID": "8d08456ad253f5ac"
+          },
+          "Version": "3.12",
+          "Locations": [
+            {
+              "StartLine": 4,
+              "EndLine": 4
+            }
+          ],
+          "AnalyzedBy": "pip"
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2019-10906",
+          "VendorIDs": [
+            "GHSA-462w-v97r-4m45"
+          ],
+          "PkgName": "Jinja2",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "InstalledVersion": "2.10.0",
+          "FixedVersion": "2.10.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-10906",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:c5411027453db8df7f606467a915cad53e778d3d9f2cb53dfbda7d0d898dd022",
+          "Title": "python-jinja2: str.format_map allows sandbox escape",
+          "Description": "In Pallets Jinja before 2.10.1, str.format_map allows a sandbox escape.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "amazon": 3,
+            "azure": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "oracle-oval": 3,
+            "redhat": 3,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+              "V3Score": 8.6,
+              "V40Score": 7.7
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+              "V2Score": 5,
+              "V3Score": 8.6
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "V3Score": 9
+            }
+          },
+          "References": [
+            "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html",
+            "https://access.redhat.com/errata/RHSA-2019:1152",
+            "https://access.redhat.com/errata/RHSA-2019:1237",
+            "https://access.redhat.com/errata/RHSA-2019:1329",
+            "https://access.redhat.com/security/cve/CVE-2019-10906",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1698839",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10906",
+            "https://errata.rockylinux.org/RLSA-2019:1152",
+            "https://github.com/advisories/GHSA-462w-v97r-4m45",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/jinja2/PYSEC-2019-217.yaml",
+            "https://linux.oracle.com/cve/CVE-2019-10906.html",
+            "https://linux.oracle.com/errata/ELSA-2019-1152.html",
+            "https://lists.apache.org/thread.html/09fc842ff444cd43d9d4c510756fec625ef8eb1175f14fd21de2605f@%3Cdevnull.infra.apache.org%3E",
+            "https://lists.apache.org/thread.html/2b52b9c8b9d6366a4f1b407a8bde6af28d9fc73fdb3b37695fd0d9ac@%3Cdevnull.infra.apache.org%3E",
+            "https://lists.apache.org/thread.html/320441dccbd9a545320f5f07306d711d4bbd31ba43dc9eebcfc602df@%3Cdevnull.infra.apache.org%3E",
+            "https://lists.apache.org/thread.html/46c055e173b52d599c648a98199972dbd6a89d2b4c4647b0500f2284@%3Cdevnull.infra.apache.org%3E",
+            "https://lists.apache.org/thread.html/57673a78c4d5c870d3f21465c7e2946b9f8285c7c57e54c2ae552f02@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/7f39f01392d320dfb48e4901db68daeece62fd60ef20955966739993@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/b2380d147b508bbcb90d2cad443c159e63e12555966ab4f320ee22da@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/f0c4a03418bcfe70c539c5dbaf99c04c98da13bfa1d3266f08564316@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-10906",
+            "https://palletsprojects.com/blog/jinja-2-10-1-released",
+            "https://palletsprojects.com/blog/jinja-2-10-1-released/",
+            "https://ubuntu.com/security/notices/USN-4011-1",
+            "https://ubuntu.com/security/notices/USN-4011-2",
+            "https://usn.ubuntu.com/4011-1",
+            "https://usn.ubuntu.com/4011-1/",
+            "https://usn.ubuntu.com/4011-2",
+            "https://usn.ubuntu.com/4011-2/",
+            "https://www.cve.org/CVERecord?id=CVE-2019-10906"
+          ],
+          "PublishedDate": "2019-04-07T00:29:00.213Z",
+          "LastModifiedDate": "2026-06-17T02:11:52.25Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-28493",
+          "VendorIDs": [
+            "GHSA-g3rq-g295-4j3m"
+          ],
+          "PkgName": "Jinja2",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "InstalledVersion": "2.10.0",
+          "FixedVersion": "2.11.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-28493",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:26ab2b978ac93b3e6ac363715c56b3ae61a35fcb9b6d3fbffa9f8a49f2311712",
+          "Title": "python-jinja2: ReDoS vulnerability in the urlize filter",
+          "Description": "This affects the package jinja2 from 0.0.0 and before 2.11.3. The ReDoS vulnerability is mainly due to the `_punctuation_re regex` operator and its use of multiple wildcards. The last wildcard is the most exploitable as it searches for trailing punctuation. This issue can be mitigated by Markdown to format user content instead of the urlize filter, or by implementing request timeouts and limiting process memory.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "nvd": 2,
+            "oracle-oval": 2,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "V3Score": 5.3,
+              "V40Score": 6.9
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 5,
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2020-28493",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1772014",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1928707",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1928904",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1935913",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1941534",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1955615",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1957458",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1962856",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1968074",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18874",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-27619",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28493",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-20095",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23336",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-28957",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29921",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-33503",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3426",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3572",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42771",
+            "https://errata.almalinux.org/8/ALSA-2021-4162.html",
+            "https://errata.rockylinux.org/RLSA-2021:4162",
+            "https://github.com/advisories/GHSA-g3rq-g295-4j3m",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/blob/ab81fd9c277900c85da0c322a2ff9d68a235b2e6/src/jinja2/utils.py%23L20",
+            "https://github.com/pallets/jinja/commit/15ef8f09b659f9100610583938005a7a10472d4d",
+            "https://github.com/pallets/jinja/pull/1343",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/jinja2/PYSEC-2021-66.yaml",
+            "https://github.com/yetingli/PoCs/tree/main/CVE-2020-28493",
+            "https://linux.oracle.com/cve/CVE-2020-28493.html",
+            "https://linux.oracle.com/errata/ELSA-2021-4162.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-28493",
+            "https://security.gentoo.org/glsa/202107-19",
+            "https://snyk.io/vuln/SNYK-PYTHON-JINJA2-1012994",
+            "https://ubuntu.com/security/notices/USN-5701-1",
+            "https://ubuntu.com/security/notices/USN-6599-1",
+            "https://www.cve.org/CVERecord?id=CVE-2020-28493"
+          ],
+          "PublishedDate": "2021-02-01T20:15:12.517Z",
+          "LastModifiedDate": "2026-06-17T03:10:32.07Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-22195",
+          "VendorIDs": [
+            "GHSA-h5c8-rqwp-cp95"
+          ],
+          "PkgName": "Jinja2",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "InstalledVersion": "2.10.0",
+          "FixedVersion": "3.1.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-22195",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:93a0ab74b67379568eab35b12dac1c9e8da5f0ba59bcd96bad14959a6e76743f",
+          "Title": "jinja2: HTML attribute injection when passing user input as keys to xmlattr filter",
+          "Description": "Jinja is an extensible templating engine. Special placeholders in the template allow writing code similar to Python syntax. It is possible to inject arbitrary HTML attributes into the rendered HTML template, potentially leading to Cross-Site Scripting (XSS). The Jinja `xmlattr` filter can be abused to inject arbitrary HTML attribute keys and values, bypassing the auto escaping mechanism and potentially leading to XSS. It may also be possible to bypass attribute validation checks if they are blacklist-based.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 2,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "nvd": 2,
+            "oracle-oval": 2,
+            "photon": 2,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "V3Score": 5.4
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "V3Score": 5.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2024:3102",
+            "https://access.redhat.com/security/cve/CVE-2024-22195",
+            "https://bugzilla.redhat.com/2257854",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2257854",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-22195",
+            "https://errata.almalinux.org/8/ALSA-2024-3102.html",
+            "https://errata.rockylinux.org/RLSA-2024:3102",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7",
+            "https://github.com/pallets/jinja/releases/tag/3.1.3",
+            "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95",
+            "https://linux.oracle.com/cve/CVE-2024-22195.html",
+            "https://linux.oracle.com/errata/ELSA-2024-3102.html",
+            "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html",
+            "https://lists.debian.org/debian-lts-announce/2024/12/msg00009.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-22195",
+            "https://ubuntu.com/security/notices/USN-6599-1",
+            "https://www.cve.org/CVERecord?id=CVE-2024-22195"
+          ],
+          "PublishedDate": "2024-01-11T03:15:11.2Z",
+          "LastModifiedDate": "2026-06-17T07:10:54.907Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-34064",
+          "VendorIDs": [
+            "GHSA-h75v-3vvj-5mfj"
+          ],
+          "PkgName": "Jinja2",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "InstalledVersion": "2.10.0",
+          "FixedVersion": "3.1.4",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-34064",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:11470d3707b1600c01732955d757d914fe68f139dff0424ea0bd0b7c38b7359b",
+          "Title": "jinja2: accepts keys containing non-attribute characters",
+          "Description": "Jinja is an extensible templating engine. The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `\u003e`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for CVE-2024-22195 only addressed spaces but not other characters. Accepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe. This vulnerability is fixed in 3.1.4.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 2,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "oracle-oval": 2,
+            "photon": 2,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "V3Score": 5.4
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "V3Score": 5.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2024:4231",
+            "https://access.redhat.com/security/cve/CVE-2024-34064",
+            "https://bugzilla.redhat.com/2279476",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2279476",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-34064",
+            "https://errata.almalinux.org/8/ALSA-2024-4231.html",
+            "https://errata.rockylinux.org/RLSA-2024:9150",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb",
+            "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj",
+            "https://linux.oracle.com/cve/CVE-2024-34064.html",
+            "https://linux.oracle.com/errata/ELSA-2024-9150.html",
+            "https://lists.debian.org/debian-lts-announce/2024/12/msg00009.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-34064",
+            "https://ubuntu.com/security/notices/USN-6787-1",
+            "https://www.cve.org/CVERecord?id=CVE-2024-34064"
+          ],
+          "PublishedDate": "2024-05-06T15:15:23.803Z",
+          "LastModifiedDate": "2026-06-17T07:32:50.2Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-56326",
+          "VendorIDs": [
+            "GHSA-q2x7-8rv6-6q7h"
+          ],
+          "PkgName": "Jinja2",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "InstalledVersion": "2.10.0",
+          "FixedVersion": "3.1.5",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-56326",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:71d01000b63a5765e15e890b1f3a336fd0454b0695519e073652f4d0d7aeab81",
+          "Title": "jinja2: Jinja has a sandbox breakout through indirect reference to format method",
+          "Description": "Jinja is an extensible templating engine. Prior to 3.1.5, An oversight in how the Jinja sandboxed environment detects calls to str.format allows an attacker that controls the content of a template to execute arbitrary Python code. To exploit the vulnerability, an attacker needs to control the content of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates. Jinja's sandbox does catch calls to str.format and ensures they don't escape the sandbox. However, it's possible to store a reference to a malicious string's format method, then pass that to a filter that calls it. No such filters are built-in to Jinja, but could be present through custom filters in an application. After the fix, such indirect calls are also handled by the sandbox. This vulnerability is fixed in 3.1.5.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-693",
+            "CWE-1336"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "oracle-oval": 2,
+            "photon": 3,
+            "redhat": 2,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V40Vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "V3Score": 7.8,
+              "V40Score": 5.4
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 6.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:0711",
+            "https://access.redhat.com/security/cve/CVE-2024-56326",
+            "https://bugzilla.redhat.com/2333856",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2333856",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-56326",
+            "https://errata.almalinux.org/8/ALSA-2025-0711.html",
+            "https://errata.rockylinux.org/RLSA-2025:0667",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/commit/48b0687e05a5466a91cd5812d604fa37ad0943b4",
+            "https://github.com/pallets/jinja/releases/tag/3.1.5",
+            "https://github.com/pallets/jinja/security/advisories/GHSA-q2x7-8rv6-6q7h",
+            "https://linux.oracle.com/cve/CVE-2024-56326.html",
+            "https://linux.oracle.com/errata/ELSA-2025-1250.html",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00022.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-56326",
+            "https://ubuntu.com/security/notices/USN-7244-1",
+            "https://ubuntu.com/security/notices/USN-7343-1",
+            "https://www.cve.org/CVERecord?id=CVE-2024-56326"
+          ],
+          "PublishedDate": "2024-12-23T16:15:07.59Z",
+          "LastModifiedDate": "2026-06-17T08:12:03.003Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-27516",
+          "VendorIDs": [
+            "GHSA-cpwx-vrp4-4pq7"
+          ],
+          "PkgName": "Jinja2",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/jinja2@2.10.0",
+            "UID": "7249dd0b809a8b17"
+          },
+          "InstalledVersion": "2.10.0",
+          "FixedVersion": "3.1.6",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-27516",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:fef5393502ddd0ce385199ac4365ae44b762f06dd02818f107011e601e6dc02a",
+          "Title": "jinja2: Jinja sandbox breakout through attr filter selecting format method",
+          "Description": "Jinja is an extensible templating engine. Prior to 3.1.6, an oversight in how the Jinja sandboxed environment interacts with the |attr filter allows an attacker that controls the content of a template to execute arbitrary Python code. To exploit the vulnerability, an attacker needs to control the content of a template. Whether that is the case depends on the type of application using Jinja. This vulnerability impacts users of applications which execute untrusted templates. Jinja's sandbox does catch calls to str.format and ensures they don't escape the sandbox. However, it's possible to use the |attr filter to get a reference to a string's plain format method, bypassing the sandbox. After the fix, the |attr filter no longer bypasses the environment's attribute lookup. This vulnerability is fixed in 3.1.6.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-1336"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "nvd": 3,
+            "oracle-oval": 3,
+            "photon": 3,
+            "redhat": 3,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V40Vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "V40Score": 5.4
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "V3Score": 8.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:3388",
+            "https://access.redhat.com/security/cve/CVE-2025-27516",
+            "https://bugzilla.redhat.com/2350190",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2350190",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-27516",
+            "https://errata.almalinux.org/8/ALSA-2025-3388.html",
+            "https://errata.rockylinux.org/RLSA-2025:3406",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/commit/90457bbf33b8662926ae65cdde4c4c32e756e403",
+            "https://github.com/pallets/jinja/security/advisories/GHSA-cpwx-vrp4-4pq7",
+            "https://linux.oracle.com/cve/CVE-2025-27516.html",
+            "https://linux.oracle.com/errata/ELSA-2025-7476.html",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00022.html",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00045.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27516",
+            "https://ubuntu.com/security/notices/USN-7343-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-27516"
+          ],
+          "PublishedDate": "2025-03-05T21:15:20.073Z",
+          "LastModifiedDate": "2026-06-17T09:03:44.56Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-14322",
+          "VendorIDs": [
+            "GHSA-j544-7q9p-6xp8"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "0.15.5",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-14322",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:86ab818b85f519b77587ec4a35000d21c7bc10b83be6d31189b991fa38c33bbf",
+          "Title": "Pallets Werkzeug vulnerable to Path Traversal",
+          "Description": "In Pallets Werkzeug before 0.15.5, SharedDataMiddleware mishandles drive names (such as C:) in Windows pathnames.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-22"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://packetstormsecurity.com/files/163398/Pallets-Werkzeug-0.15.4-Path-Traversal.html",
+            "https://github.com/pallets/werkzeug",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-14322",
+            "https://palletsprojects.com/blog/werkzeug-0-15-5-released",
+            "https://palletsprojects.com/blog/werkzeug-0-15-5-released/"
+          ],
+          "PublishedDate": "2019-07-28T13:15:10.597Z",
+          "LastModifiedDate": "2026-06-17T02:18:12.01Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-14806",
+          "VendorIDs": [
+            "GHSA-gq9m-qvpx-68hc"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "0.15.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-14806",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:9c1631587034d298dcb56b2f2a7d70c5111500ff661917a8b9e74c04163bf987",
+          "Title": "python-werkzeug: insufficient debugger PIN randomness vulnerability",
+          "Description": "Pallets Werkzeug before 0.15.3, when used with Docker, has insufficient debugger PIN randomness because Docker containers share the same machine id.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-331"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "V3Score": 7.5,
+              "V40Score": 8.7
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00034.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00047.html",
+            "https://access.redhat.com/security/cve/CVE-2019-14806",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py#L168",
+            "https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/werkzeug/PYSEC-2019-140.yaml",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-14806",
+            "https://palletsprojects.com/blog/werkzeug-0-15-3-released",
+            "https://palletsprojects.com/blog/werkzeug-0-15-3-released/",
+            "https://ubuntu.com/security/notices/USN-4655-1",
+            "https://www.cve.org/CVERecord?id=CVE-2019-14806"
+          ],
+          "PublishedDate": "2019-08-09T15:15:12.917Z",
+          "LastModifiedDate": "2026-06-17T02:19:03.327Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-25577",
+          "VendorIDs": [
+            "GHSA-xg9f-g7g7-2323"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "2.2.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-25577",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:eba06c08d46b66d227f79969f06aa00e18a3944fe39111fcd494b9cf054d0912",
+          "Title": "python-werkzeug: high resource usage when parsing multipart form data with many fields",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. Prior to version 2.2.3, Werkzeug's multipart form data parser will parse an unlimited number of parts, including file parts. Parts can be a small amount of bytes, but each requires CPU time to parse and may use more memory as Python data. If a request can be made to an endpoint that accesses `request.data`, `request.form`, `request.files`, or `request.get_data(parse_form_data=False)`, it can cause unexpectedly high resource usage. This allows an attacker to cause a denial of service by sending crafted multipart data to an endpoint that will parse it. The amount of CPU time required can block worker processes from handling legitimate requests. The amount of RAM required can trigger an out of memory kill of the process. Unlimited file parts can use up memory and file handles. If many concurrent requests are sent continuously, this can exhaust or kill all available workers. Version 2.2.3 contains a patch for this issue.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "VendorSeverity": {
+            "amazon": 3,
+            "cbl-mariner": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "oracle-oval": 1,
+            "photon": 3,
+            "redhat": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-25577",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1",
+            "https://github.com/pallets/werkzeug/releases/tag/2.2.3",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-xg9f-g7g7-2323",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/werkzeug/PYSEC-2023-58.yaml",
+            "https://linux.oracle.com/cve/CVE-2023-25577.html",
+            "https://linux.oracle.com/errata/ELSA-2023-12709.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-25577",
+            "https://security.netapp.com/advisory/ntap-20230818-0003",
+            "https://security.netapp.com/advisory/ntap-20230818-0003/",
+            "https://ubuntu.com/security/notices/USN-5948-1",
+            "https://ubuntu.com/security/notices/USN-5948-2",
+            "https://www.cve.org/CVERecord?id=CVE-2023-25577",
+            "https://www.debian.org/security/2023/dsa-5470"
+          ],
+          "PublishedDate": "2023-02-14T20:15:17.543Z",
+          "LastModifiedDate": "2026-06-17T05:41:31.847Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-34069",
+          "VendorIDs": [
+            "GHSA-2g68-c3qc-8985"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "3.0.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-34069",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:b3cfdefbfbd175b0257fd7ed6a3279d59356bde05e41f9470df3b49e7a8e6c55",
+          "Title": "python-werkzeug: user may execute code on a developer's machine",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. The debugger in affected versions of Werkzeug can allow an attacker to execute code on a developer's machine under some circumstances. This requires the attacker to get the developer to interact with a domain and subdomain they control, and enter the debugger PIN, but if they are successful it allows access to the debugger even if it is only running on localhost. This also requires the attacker to guess a URL in the developer's application that will trigger the debugger. This vulnerability is fixed in 3.0.3.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-352"
+          ],
+          "VendorSeverity": {
+            "amazon": 3,
+            "azure": 3,
+            "cbl-mariner": 3,
+            "ghsa": 3,
+            "photon": 3,
+            "redhat": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-34069",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/3386395b24c7371db11a5b8eaac0c91da5362692",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-2g68-c3qc-8985",
+            "https://lists.debian.org/debian-lts-announce/2025/02/msg00026.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/H4SH32AM3CTPMAAEOIDAN7VU565LO4IR",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/H4SH32AM3CTPMAAEOIDAN7VU565LO4IR/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HFERFN7PINV4MOGMGA3DPIXJPDCYOEJZ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HFERFN7PINV4MOGMGA3DPIXJPDCYOEJZ/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-34069",
+            "https://security.netapp.com/advisory/ntap-20240614-0004",
+            "https://security.netapp.com/advisory/ntap-20240614-0004/",
+            "https://ubuntu.com/security/notices/USN-6799-1",
+            "https://www.cve.org/CVERecord?id=CVE-2024-34069"
+          ],
+          "PublishedDate": "2024-05-06T15:15:23.99Z",
+          "LastModifiedDate": "2026-06-17T07:32:50.85Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-49766",
+          "VendorIDs": [
+            "GHSA-f9vj-2wh5-fj8j"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "3.0.6",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-49766",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:607143795c2f30f322feaaa887c28c4ed9328ac453b373542635b7e71f18a2e2",
+          "Title": "werkzeug: python-werkzeug: Werkzeug safe_join not safe on Windows",
+          "Description": "Werkzeug is a Web Server Gateway Interface web application library. On Python \u003c 3.11 on Windows, os.path.isabs() does not catch UNC paths like //server/share. Werkzeug's safe_join() relies on this check, and so can produce a path that is not safe, potentially allowing unintended access to data. Applications using Python \u003e= 3.11, or not using Windows, are not vulnerable. Werkzeug version 3.0.6 contains a patch.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-22"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V40Vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "V40Score": 6.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 3.7
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-49766",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/2767bcb10a7dd1c297d812cc5e6d11a474c1f092",
+            "https://github.com/pallets/werkzeug/releases/tag/3.0.6",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-f9vj-2wh5-fj8j",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-49766",
+            "https://security.netapp.com/advisory/ntap-20250131-0005",
+            "https://security.netapp.com/advisory/ntap-20250131-0005/",
+            "https://www.cve.org/CVERecord?id=CVE-2024-49766"
+          ],
+          "PublishedDate": "2024-10-25T20:15:04.41Z",
+          "LastModifiedDate": "2026-06-17T08:00:24.517Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-66221",
+          "VendorIDs": [
+            "GHSA-hgf8-39gv-g3f2"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "3.1.4",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-66221",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:9cc9e5fe5597cdfd49483fabe3c11e9d233c5bdb57e878ae71d5dc1632c180dc",
+          "Title": "Werkzeug: Werkzeug: Denial of service via Windows device names in path segments",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.4, Werkzeug's safe_join function allows path segments with Windows device names. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been patched in version 3.1.4.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-67"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "V40Score": 6.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2025-66221",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/4b833376a45c323a189cd11d2362bcffdb1c0c13",
+            "https://github.com/pallets/werkzeug/releases/tag/3.1.4",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66221",
+            "https://www.cve.org/CVERecord?id=CVE-2025-66221"
+          ],
+          "PublishedDate": "2025-11-29T03:16:00.05Z",
+          "LastModifiedDate": "2026-06-17T09:56:30.263Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-21860",
+          "VendorIDs": [
+            "GHSA-87hc-h4r5-73f7"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "3.1.5",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-21860",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:2ac89fd56821d7912fd2d9e8e8ec32439acc256416b59257f899f4cb3ae2987d",
+          "Title": " Werkzeug safe_join() allows Windows special device names with compound extensions",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.5, Werkzeug's safe_join function allows path segments with Windows device names that have file extensions or trailing spaces. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. Windows still accepts them with any file extension, such as CON.txt, or trailing spaces such as CON. This issue has been patched in version 3.1.5.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-67"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "V3Score": 5.3,
+              "V40Score": 6.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/7ae1d254e04a0c33e241ac1cca4783ce6c875ca3",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-87hc-h4r5-73f7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-21860"
+          ],
+          "PublishedDate": "2026-01-08T19:15:59Z",
+          "LastModifiedDate": "2026-06-17T10:19:02.74Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-27199",
+          "VendorIDs": [
+            "GHSA-29vq-49wr-vm6x"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "3.1.6",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-27199",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:1b2f49f4e348510884aa73b1a4c4e7456ad7774e7dd57f4ac5215604026a4264",
+          "Title": " Werkzeug safe_join() allows Windows special device names",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-67"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "V40Score": 6.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
+            "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-27199"
+          ],
+          "PublishedDate": "2026-02-21T06:17:00.71Z",
+          "LastModifiedDate": "2026-06-17T10:26:50.207Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-23934",
+          "VendorIDs": [
+            "GHSA-px8h-6qxv-m22q"
+          ],
+          "PkgName": "Werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@0.15.0",
+            "UID": "497ffa7ea74e08a"
+          },
+          "InstalledVersion": "0.15.0",
+          "FixedVersion": "2.2.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-23934",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:f2a379b3fc54124c1a061f5c8fb932a0bd75509c6694a84cb0eccf1de576c53f",
+          "Title": "python-werkzeug: cookie prefixed with = can shadow unprefixed cookie",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. Browsers may allow \"nameless\" cookies that look like `=value` instead of `key=value`. A vulnerable browser may allow a compromised application on an adjacent subdomain to exploit this to set a cookie like `=__Host-test=bad` for another subdomain. Werkzeug prior to 2.2.3 will parse the cookie `=__Host-test=bad` as __Host-test=bad`. If a Werkzeug application is running next to a vulnerable or malicious subdomain which sets such a cookie using a vulnerable browser, the Werkzeug application will see the bad cookie value but the valid cookie key. The issue is fixed in Werkzeug 2.2.3.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "cbl-mariner": 1,
+            "ghsa": 1,
+            "nvd": 1,
+            "oracle-oval": 1,
+            "photon": 1,
+            "redhat": 1,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "V3Score": 2.6
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "V3Score": 3.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "V3Score": 2.6
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-23934",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/cf275f42acad1b5950c50ffe8ef58fe62cdce028",
+            "https://github.com/pallets/werkzeug/releases/tag/2.2.3",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-px8h-6qxv-m22q",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/werkzeug/PYSEC-2023-57.yaml",
+            "https://linux.oracle.com/cve/CVE-2023-23934.html",
+            "https://linux.oracle.com/errata/ELSA-2023-12709.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-23934",
+            "https://security.netapp.com/advisory/ntap-20230818-0003",
+            "https://security.netapp.com/advisory/ntap-20230818-0003/",
+            "https://ubuntu.com/security/notices/USN-5948-1",
+            "https://ubuntu.com/security/notices/USN-5948-2",
+            "https://www.cve.org/CVERecord?id=CVE-2023-23934",
+            "https://www.debian.org/security/2023/dsa-5470"
+          ],
+          "PublishedDate": "2023-02-14T20:15:17.37Z",
+          "LastModifiedDate": "2026-06-17T05:38:19.313Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-25659",
+          "VendorIDs": [
+            "GHSA-hggm-jpg3-v476"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "3.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-25659",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:8e42d2a37aa6b3e2702a314b9318362b373e1c475d2541a6fb54c0ea4e4087bc",
+          "Title": "python-cryptography: Bleichenbacher timing oracle attack against RSA decryption",
+          "Description": "python-cryptography 3.2 is vulnerable to Bleichenbacher timing attacks in the RSA decryption API, via timed processing of valid PKCS#1 v1.5 ciphertext.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-385"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "cbl-mariner": 2,
+            "ghsa": 3,
+            "nvd": 2,
+            "oracle-oval": 2,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "V3Score": 5.9,
+              "V40Score": 8.2
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V2Score": 4.3,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2020-25659",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1778939",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1873581",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1889988",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1891947",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1907429",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1926226",
+            "https://cryptography.io/en/latest/changelog.html#v3-2",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-25659",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-36242",
+            "https://errata.rockylinux.org/RLSA-2021:1608",
+            "https://github.com/advisories/GHSA-hggm-jpg3-v476",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/commit/58494b41d6ecb0f56b7c5f05d5f5e3ca0320d494",
+            "https://github.com/pyca/cryptography/pull/5507",
+            "https://github.com/pyca/cryptography/pull/5507/commits/ce1bef6f1ee06ac497ca0c837fbd1c7ef6c2472b",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-hggm-jpg3-v476",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2021-62.yaml",
+            "https://linux.oracle.com/cve/CVE-2020-25659.html",
+            "https://linux.oracle.com/errata/ELSA-2021-1608.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-25659",
+            "https://pypi.org/project/cryptography",
+            "https://ubuntu.com/security/notices/USN-4613-1",
+            "https://www.cve.org/CVERecord?id=CVE-2020-25659",
+            "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "https://www.oracle.com/security-alerts/cpujul2022.html"
+          ],
+          "PublishedDate": "2021-01-11T16:15:15.04Z",
+          "LastModifiedDate": "2026-06-17T03:07:04.6Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-0286",
+          "VendorIDs": [
+            "GHSA-x4qr-2fvf-3mr5"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "39.0.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-0286",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:88f18ef54d3a8251ce79e80245d27bbf0ec360e6417dca3d38fb1b5ba8a55afe",
+          "Title": "openssl: X.400 address type confusion in X.509 GeneralName",
+          "Description": "There is a type confusion vulnerability relating to X.400 address processing\ninside an X.509 GeneralName. X.400 addresses were parsed as an ASN1_STRING but\nthe public structure definition for GENERAL_NAME incorrectly specified the type\nof the x400Address field as ASN1_TYPE. This field is subsequently interpreted by\nthe OpenSSL function GENERAL_NAME_cmp as an ASN1_TYPE rather than an\nASN1_STRING.\n\nWhen CRL checking is enabled (i.e. the application sets the\nX509_V_FLAG_CRL_CHECK flag), this vulnerability may allow an attacker to pass\narbitrary pointers to a memcmp call, enabling them to read memory contents or\nenact a denial of service. In most cases, the attack requires the attacker to\nprovide both the certificate chain and CRL, neither of which need to have a\nvalid signature. If the attacker only controls one of these inputs, the other\ninput must already contain an X.400 address as a CRL distribution point, which\nis uncommon. As such, this vulnerability is most likely to only affect\napplications which have implemented their own functionality for retrieving CRLs\nover a network.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-843"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "azure": 3,
+            "cbl-mariner": 3,
+            "ghsa": 3,
+            "julia": 3,
+            "nvd": 3,
+            "oracle-oval": 3,
+            "photon": 3,
+            "redhat": 3,
+            "rocky": 3,
+            "ubuntu": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 7.4
+            },
+            "julia": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 7.4
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 7.4
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "V3Score": 7.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2025:7895",
+            "https://access.redhat.com/security/cve/CVE-2023-0286",
+            "https://access.redhat.com/security/cve/cve-2023-0286",
+            "https://bugzilla.redhat.com/2164440",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144000",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144003",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144006",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144008",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144010",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144012",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144015",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144017",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2144019",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2145170",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2158412",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164440",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164487",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164488",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164492",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164494",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164497",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164499",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2164500",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4203",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4304",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4450",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0215",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0216",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0217",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0286",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0401",
+            "https://errata.almalinux.org/8/ALSA-2025-7895.html",
+            "https://errata.rockylinux.org/RLSA-2023:0946",
+            "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.6.2-relnotes.txt",
+            "https://ftp.openbsd.org/pub/OpenBSD/patches/7.2/common/018_x509.patch.sig",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2c6c9d439b484e1ba9830d8454a34fa4f80fdfe9",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2f7530077e0ef79d98718138716bc51ca0cad658",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=fd2af07dc083a350c959147097003a14a5e8ac4d",
+            "https://github.com/advisories/GHSA-x4qr-2fvf-3mr5",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-x4qr-2fvf-3mr5",
+            "https://linux.oracle.com/cve/CVE-2023-0286.html",
+            "https://linux.oracle.com/errata/ELSA-2025-7937.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-0286",
+            "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2023-0003",
+            "https://rustsec.org/advisories/RUSTSEC-2023-0006.html",
+            "https://security.gentoo.org/glsa/202402-08",
+            "https://ubuntu.com/security/notices/USN-5844-1",
+            "https://ubuntu.com/security/notices/USN-5845-1",
+            "https://ubuntu.com/security/notices/USN-5845-2",
+            "https://ubuntu.com/security/notices/USN-6564-1",
+            "https://ubuntu.com/security/notices/USN-7894-1",
+            "https://www.cve.org/CVERecord?id=CVE-2023-0286",
+            "https://www.openssl.org/news/secadv/20230207.txt"
+          ],
+          "PublishedDate": "2023-02-08T20:15:24.267Z",
+          "LastModifiedDate": "2026-06-17T05:25:12.637Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-50782",
+          "VendorIDs": [
+            "GHSA-3ww4-gg4f-jr7f"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "42.0.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-50782",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:2b7658d9705d1134b8bbc7028b735193de31b4e8fdef7c0ec124caa8480ef3fc",
+          "Title": "python-cryptography: Bleichenbacher timing oracle attack against RSA decryption - incomplete fix for CVE-2020-25659",
+          "Description": "A flaw was found in the python-cryptography package. This issue may allow a remote attacker to decrypt captured messages in TLS servers that use RSA key exchanges, which may lead to exposure of confidential or sensitive data.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-203"
+          ],
+          "VendorSeverity": {
+            "azure": 3,
+            "cbl-mariner": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "photon": 3,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "V3Score": 7.5,
+              "V40Score": 8.7
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-50782",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2254432",
+            "https://github.com/openssl/openssl/pull/13817",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/issues/9785",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-50782",
+            "https://people.redhat.com/~hkario/marvin/",
+            "https://ubuntu.com/security/notices/USN-6663-1",
+            "https://ubuntu.com/security/notices/USN-6673-1",
+            "https://ubuntu.com/security/notices/USN-6673-2",
+            "https://www.couchbase.com/alerts",
+            "https://www.couchbase.com/alerts/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-50782"
+          ],
+          "PublishedDate": "2024-02-05T21:15:11.183Z",
+          "LastModifiedDate": "2026-06-17T06:39:58.24Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-26007",
+          "VendorIDs": [
+            "GHSA-r6ph-v2qm-q3c2"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "46.0.5",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-26007",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:572f4279686622f4e9efd8b76ade64fc8ea0fea4f125d1e67aad33f4b83c3702",
+          "Title": "cryptography: cryptography Subgroup Attack Due to Missing Subgroup Validation for SECT Curves",
+          "Description": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 46.0.5, the public_key_from_numbers (or EllipticCurvePublicNumbers.public_key()), EllipticCurvePublicNumbers.public_key(), load_der_public_key() and load_pem_public_key() functions do not verify that the point belongs to the expected prime-order subgroup of the curve. This missing validation allows an attacker to provide a public key point P from a small-order subgroup. This can lead to security issues in various situations, such as the most commonly used signature verification (ECDSA) and shared key negotiation (ECDH). When the victim computes the shared secret as S = [victim_private_key]P via ECDH, this leaks information about victim_private_key mod (small_subgroup_order). For curves with cofactor \u003e 1, this reveals the least significant bits of the private key. When these weak public keys are used in ECDSA , it's easy to forge signatures on the small subgroup. Only SECT curves are impacted by this. This vulnerability is fixed in 46.0.5.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-345",
+            "CWE-354"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "azure": 3,
+            "ghsa": 3,
+            "nvd": 2,
+            "oracle-oval": 3,
+            "redhat": 3,
+            "rocky": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V40Vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "V40Score": 8.2
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "V3Score": 7.4
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2026/02/10/4",
+            "https://access.redhat.com/errata/RHSA-2026:10184",
+            "https://access.redhat.com/errata/RHSA-2026:12176",
+            "https://access.redhat.com/errata/RHSA-2026:13512",
+            "https://access.redhat.com/errata/RHSA-2026:13545",
+            "https://access.redhat.com/errata/RHSA-2026:13553",
+            "https://access.redhat.com/errata/RHSA-2026:13672",
+            "https://access.redhat.com/errata/RHSA-2026:19355",
+            "https://access.redhat.com/errata/RHSA-2026:21431",
+            "https://access.redhat.com/errata/RHSA-2026:21517",
+            "https://access.redhat.com/errata/RHSA-2026:22330",
+            "https://access.redhat.com/errata/RHSA-2026:22993",
+            "https://access.redhat.com/errata/RHSA-2026:2694",
+            "https://access.redhat.com/errata/RHSA-2026:5168",
+            "https://access.redhat.com/errata/RHSA-2026:5665",
+            "https://access.redhat.com/errata/RHSA-2026:6308",
+            "https://access.redhat.com/errata/RHSA-2026:6309",
+            "https://access.redhat.com/errata/RHSA-2026:6497",
+            "https://access.redhat.com/errata/RHSA-2026:6567",
+            "https://access.redhat.com/errata/RHSA-2026:6568",
+            "https://access.redhat.com/errata/RHSA-2026:7295",
+            "https://access.redhat.com/security/cve/CVE-2026-26007",
+            "https://bugzilla.redhat.com/2438762",
+            "https://bugzilla.redhat.com/2447194",
+            "https://bugzilla.redhat.com/2448553",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2438762",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2448553",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-26007",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-30922",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-32597",
+            "https://errata.almalinux.org/8/ALSA-2026-12176.html",
+            "https://errata.rockylinux.org/RLSA-2026:19355",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/commit/0eebb9dbb6343d9bc1d91e5a2482ed4e054a6d8c",
+            "https://github.com/pyca/cryptography/releases/tag/46.0.5",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-r6ph-v2qm-q3c2",
+            "https://linux.oracle.com/cve/CVE-2026-26007.html",
+            "https://linux.oracle.com/errata/ELSA-2026-19355.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-26007",
+            "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-26007.json",
+            "https://ubuntu.com/security/notices/USN-8087-1",
+            "https://ubuntu.com/security/notices/USN-8087-3",
+            "https://www.cve.org/CVERecord?id=CVE-2026-26007"
+          ],
+          "PublishedDate": "2026-02-10T22:17:00.307Z",
+          "LastModifiedDate": "2026-07-15T02:18:58.83Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-537c-gmf6-5ccf",
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "48.0.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-537c-gmf6-5ccf",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:9912243c80ba0b197cf5b318c09b9a9a94ac0ae92e530df2b1fe73c2039965a4",
+          "Title": "Vulnerable OpenSSL included in cryptography wheels",
+          "Description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in wheels prior to cryptograph 48.01 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://openssl-library.org/news/secadv/20260609.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "ghsa": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-537c-gmf6-5ccf",
+            "https://openssl-library.org/news/secadv/20260609.txt"
+          ],
+          "PublishedDate": "2026-06-15T20:12:27Z",
+          "LastModifiedDate": "2026-06-15T20:12:27Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-23931",
+          "VendorIDs": [
+            "GHSA-w7pp-m8wf-vj6r"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "39.0.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-23931",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:4d1ced826b2c23c2149a743d9747e7929c37c34b271228eed4f22453b8f7bfa0",
+          "Title": "python-cryptography: memory corruption via immutable objects",
+          "Description": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. In affected versions `Cipher.update_into` would accept Python objects which implement the buffer protocol, but provide only immutable buffers. This would allow immutable objects (such as `bytes`) to be mutated, thus violating fundamental rules of Python and resulting in corrupted output. This now correctly raises an exception. This issue has been present since `update_into` was originally introduced in cryptography 1.8.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-754"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 2,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "nvd": 2,
+            "oracle-oval": 2,
+            "photon": 2,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+              "V3Score": 6.5,
+              "V40Score": 6.9
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+              "V3Score": 6.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2024:2985",
+            "https://access.redhat.com/security/cve/CVE-2023-23931",
+            "https://bugzilla.redhat.com/2158559",
+            "https://bugzilla.redhat.com/2171817",
+            "https://bugzilla.redhat.com/2196183",
+            "https://bugzilla.redhat.com/2242493",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2158559",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2171817",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2196183",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2242493",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40897",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23931",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27043",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-43804",
+            "https://errata.almalinux.org/8/ALSA-2024-2985.html",
+            "https://errata.rockylinux.org/RLSA-2024:2985",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/commit/d6951dca25de45abd52da51b608055371fbcde4e",
+            "https://github.com/pyca/cryptography/pull/8230",
+            "https://github.com/pyca/cryptography/pull/8230/commits/94a50a9731f35405f0357fa5f3b177d46a726ab3",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-w7pp-m8wf-vj6r",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2023-11.yaml",
+            "https://linux.oracle.com/cve/CVE-2023-23931.html",
+            "https://linux.oracle.com/errata/ELSA-2024-2985.html",
+            "https://lists.debian.org/debian-lts-announce/2024/10/msg00012.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-23931",
+            "https://security.netapp.com/advisory/ntap-20230324-0007",
+            "https://security.netapp.com/advisory/ntap-20230324-0007/",
+            "https://ubuntu.com/security/notices/USN-6539-1",
+            "https://www.cve.org/CVERecord?id=CVE-2023-23931"
+          ],
+          "PublishedDate": "2023-02-07T21:15:09.85Z",
+          "LastModifiedDate": "2026-06-17T05:38:18.92Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-0727",
+          "VendorIDs": [
+            "GHSA-9v9h-cgj8-h64p"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "42.0.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-0727",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:a8cea8eea714308d5b51bed534ceb8e4ddaa8e89cda40058742a4bda02288621",
+          "Title": "openssl: denial of service via null dereference",
+          "Description": "Issue summary: Processing a maliciously formatted PKCS12 file may lead OpenSSL\nto crash leading to a potential Denial of Service attack\n\nImpact summary: Applications loading files in the PKCS12 format from untrusted\nsources might terminate abruptly.\n\nA file in PKCS12 format can contain certificates and keys and may come from an\nuntrusted source. The PKCS12 specification allows certain fields to be NULL, but\nOpenSSL does not correctly check for this case. This can lead to a NULL pointer\ndereference that results in OpenSSL crashing. If an application processes PKCS12\nfiles from an untrusted source using the OpenSSL APIs then that application will\nbe vulnerable to this issue.\n\nOpenSSL APIs that are vulnerable to this are: PKCS12_parse(),\nPKCS12_unpack_p7data(), PKCS12_unpack_p7encdata(), PKCS12_unpack_authsafes()\nand PKCS12_newpass().\n\nWe have also fixed a similar issue in SMIME_write_PKCS7(). However since this\nfunction is related to writing data we do not consider it security significant.\n\nThe FIPS modules in 3.2, 3.1 and 3.0 are not affected by this issue.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-476"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "amazon": 2,
+            "azure": 2,
+            "cbl-mariner": 2,
+            "ghsa": 2,
+            "julia": 2,
+            "nvd": 2,
+            "oracle-oval": 2,
+            "photon": 2,
+            "redhat": 1,
+            "rocky": 2,
+            "ubuntu": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            },
+            "julia": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2024/03/11/1",
+            "https://access.redhat.com/errata/RHSA-2024:9088",
+            "https://access.redhat.com/security/cve/CVE-2024-0727",
+            "https://bugzilla.redhat.com/2257571",
+            "https://bugzilla.redhat.com/2258502",
+            "https://bugzilla.redhat.com/2259944",
+            "https://bugzilla.redhat.com/2284243",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2257571",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2258502",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2259944",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2284243",
+            "https://cert-portal.siemens.com/productcert/html/ssa-265688.html",
+            "https://cert-portal.siemens.com/productcert/html/ssa-277137.html",
+            "https://cert-portal.siemens.com/productcert/html/ssa-331112.html",
+            "https://cert-portal.siemens.com/productcert/html/ssa-769027.html",
+            "https://cert-portal.siemens.com/productcert/html/ssa-915275.html",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6129",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-6237",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0727",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-1298",
+            "https://errata.almalinux.org/9/ALSA-2024-9088.html",
+            "https://errata.rockylinux.org/RLSA-2024:9088",
+            "https://github.com/advisories/GHSA-9v9h-cgj8-h64p",
+            "https://github.com/alexcrichton/openssl-src-rs/commit/add20f73b6b42be7451af2e1044d4e0e778992b2",
+            "https://github.com/github/advisory-database/pull/3472",
+            "https://github.com/openssl/openssl/commit/09df4395b5071217b76dc7d3d2e630eb8c5a79c2",
+            "https://github.com/openssl/openssl/commit/775acfdbd0c6af9ac855f34969cdab0c0c90844a",
+            "https://github.com/openssl/openssl/commit/d135eeab8a5dbf72b3da5240bab9ddb7678dbd2c",
+            "https://github.com/openssl/openssl/pull/23362",
+            "https://github.com/pyca/cryptography/commit/3519591d255d4506fbcd0d04037d45271903c64d",
+            "https://github.openssl.org/openssl/extended-releases/commit/03b3941d60c4bce58fab69a0c22377ab439bc0e8",
+            "https://github.openssl.org/openssl/extended-releases/commit/aebaa5883e31122b404e450732dc833dc9dee539",
+            "https://linux.oracle.com/cve/CVE-2024-0727.html",
+            "https://linux.oracle.com/errata/ELSA-2024-9088.html",
+            "https://lists.debian.org/debian-lts-announce/2024/10/msg00033.html",
+            "https://lists.debian.org/debian-lts-announce/2024/11/msg00000.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-0727",
+            "https://security.netapp.com/advisory/ntap-20240208-0006",
+            "https://security.netapp.com/advisory/ntap-20240208-0006/",
+            "https://ubuntu.com/security/notices/USN-6622-1",
+            "https://ubuntu.com/security/notices/USN-6632-1",
+            "https://ubuntu.com/security/notices/USN-6709-1",
+            "https://ubuntu.com/security/notices/USN-7018-1",
+            "https://ubuntu.com/security/notices/USN-7894-1",
+            "https://www.cve.org/CVERecord?id=CVE-2024-0727",
+            "https://www.openssl.org/news/secadv/20240125.txt"
+          ],
+          "PublishedDate": "2024-01-26T09:15:07.637Z",
+          "LastModifiedDate": "2026-06-17T06:54:07.03Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-34073",
+          "VendorIDs": [
+            "GHSA-m959-cc7f-wv43"
+          ],
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "46.0.6",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-34073",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:b11e94de58531cd5827c446de568f6f4b40680efa79b334c046061abb55d5f31",
+          "Title": "python-cryptography: Cryptography: Security bypass due to improper DNS name constraint validation",
+          "Description": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-295"
+          ],
+          "VendorSeverity": {
+            "ghsa": 1,
+            "nvd": 2,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "V40Vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U",
+              "V3Score": 5.3,
+              "V40Score": 1.7
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.7
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-34073",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/cryptography/PYSEC-2026-35.yaml",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-34073",
+            "https://www.cve.org/CVERecord?id=CVE-2026-34073"
+          ],
+          "PublishedDate": "2026-03-31T03:15:59.123Z",
+          "LastModifiedDate": "2026-06-17T10:38:31.343Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-5cpq-8wj7-hf2v",
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "41.0.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-5cpq-8wj7-hf2v",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:0bcc5a72b609afdeec94a097eff2ee942109c5f0f68f0766223847605f3caa25",
+          "Title": "Vulnerable OpenSSL included in cryptography wheels",
+          "Description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+          "Severity": "LOW",
+          "VendorSeverity": {
+            "ghsa": 1
+          },
+          "References": [
+            "https://cryptography.io/en/latest/changelog/#v41-0-0",
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/commit/8708245ccdeaff21d65eea68a4f8d2a7c5949a22",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-5cpq-8wj7-hf2v"
+          ],
+          "PublishedDate": "2023-06-02T17:13:10Z",
+          "LastModifiedDate": "2023-06-02T17:13:10Z"
+        },
+        {
+          "VulnerabilityID": "GHSA-jm77-qphf-c4w8",
+          "PkgName": "cryptography",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/cryptography@2.3.0",
+            "UID": "3f8040d7889ca62a"
+          },
+          "InstalledVersion": "2.3.0",
+          "FixedVersion": "41.0.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-jm77-qphf-c4w8",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:cc30161124539be5a61d069fa1c99f4bdfea6d127d1d413c51862d37d6b2655f",
+          "Title": "pyca/cryptography's wheels include vulnerable OpenSSL",
+          "Description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+          "Severity": "LOW",
+          "VendorSeverity": {
+            "ghsa": 1
+          },
+          "References": [
+            "https://github.com/pyca/cryptography",
+            "https://github.com/pyca/cryptography/commit/b22271cf3c3dd8dc8978f8f4b00b5c7060b6538d",
+            "https://github.com/pyca/cryptography/commit/bfa4d95f0f356f2d535efd5c775e0fb3efe90ef2",
+            "https://github.com/pyca/cryptography/security/advisories/GHSA-jm77-qphf-c4w8",
+            "https://www.openssl.org/news/secadv/20230714.txt",
+            "https://www.openssl.org/news/secadv/20230719.txt",
+            "https://www.openssl.org/news/secadv/20230731.txt"
+          ],
+          "PublishedDate": "2023-08-01T22:34:41Z",
+          "LastModifiedDate": "2023-08-01T22:34:41Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2018-1000805",
+          "VendorIDs": [
+            "GHSA-f2j6-wrhh-v25m"
+          ],
+          "PkgName": "paramiko",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/paramiko@2.4.1",
+            "UID": "b93319cba5c5d40"
+          },
+          "InstalledVersion": "2.4.1",
+          "FixedVersion": "2.4.2, 2.3.3, 2.2.4, 2.1.6, 2.0.9",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-1000805",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:440138fe4f0c81f8e4005e9a098adc83639f050f92ddfef0e8375b9aafdf4614",
+          "Title": "python-paramiko: Authentication bypass in auth_handler.py",
+          "Description": "Paramiko version 2.4.1, 2.3.2, 2.2.3, 2.1.5, 2.0.8, 1.18.5, 1.17.6 contains a Incorrect Access Control vulnerability in SSH server that can result in RCE. This attack appear to be exploitable via network connectivity.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-863"
+          ],
+          "VendorSeverity": {
+            "amazon": 4,
+            "ghsa": 3,
+            "nvd": 3,
+            "oracle-oval": 4,
+            "photon": 3,
+            "redhat": 4,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "V3Score": 8.8,
+              "V40Score": 8.7
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 6.5,
+              "V3Score": 8.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHBA-2018:3497",
+            "https://access.redhat.com/errata/RHSA-2018:3347",
+            "https://access.redhat.com/errata/RHSA-2018:3406",
+            "https://access.redhat.com/errata/RHSA-2018:3505",
+            "https://access.redhat.com/security/cve/CVE-2018-1000805",
+            "https://github.com/advisories/GHSA-f2j6-wrhh-v25m",
+            "https://github.com/paramiko/paramiko",
+            "https://github.com/paramiko/paramiko/issues/1283",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/paramiko/PYSEC-2018-69.yaml",
+            "https://herolab.usd.de/wp-content/uploads/sites/4/usd20180023.txt",
+            "https://linux.oracle.com/cve/CVE-2018-1000805.html",
+            "https://linux.oracle.com/errata/ELSA-2018-3406.html",
+            "https://lists.debian.org/debian-lts-announce/2018/10/msg00018.html",
+            "https://lists.debian.org/debian-lts-announce/2021/12/msg00025.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-1000805",
+            "https://ubuntu.com/security/notices/USN-3796-1",
+            "https://ubuntu.com/security/notices/USN-3796-2",
+            "https://ubuntu.com/security/notices/USN-3796-3",
+            "https://usn.ubuntu.com/3796-1",
+            "https://usn.ubuntu.com/3796-1/",
+            "https://usn.ubuntu.com/3796-2",
+            "https://usn.ubuntu.com/3796-2/",
+            "https://usn.ubuntu.com/3796-3",
+            "https://usn.ubuntu.com/3796-3/",
+            "https://www.cve.org/CVERecord?id=CVE-2018-1000805"
+          ],
+          "PublishedDate": "2018-10-08T15:29:00.713Z",
+          "LastModifiedDate": "2026-06-17T01:33:05.013Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2026-44405",
+          "VendorIDs": [
+            "GHSA-r374-rxx8-8654"
+          ],
+          "PkgName": "paramiko",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/paramiko@2.4.1",
+            "UID": "b93319cba5c5d40"
+          },
+          "InstalledVersion": "2.4.1",
+          "Status": "affected",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-44405",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:9fed9088a32b6c3759a848a078f87a367d04a68cc700614a640c14dd7b28cb30",
+          "Title": "paramiko: Paramiko: Data integrity could be compromised due to SHA-1 algorithm use",
+          "Description": "In Paramiko through 4.0.0 before a448945, rsakey.py allows the SHA-1 algorithm.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-327"
+          ],
+          "VendorSeverity": {
+            "ghsa": 1,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N",
+              "V3Score": 3.4
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N",
+              "V3Score": 3.4
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-44405",
+            "https://github.com/paramiko/paramiko",
+            "https://github.com/paramiko/paramiko/commit/a4489456b6f65281e172380cc4826cee5e851dbb",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-44405",
+            "https://ostif.org/wp-content/uploads/2026/05/25-11-2415-REP_paramiko-security-audit_v1.1.pdf",
+            "https://www.cve.org/CVERecord?id=CVE-2026-44405"
+          ],
+          "PublishedDate": "2026-05-06T00:16:04.883Z",
+          "LastModifiedDate": "2026-06-17T10:50:35.763Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-18342",
+          "VendorIDs": [
+            "GHSA-rprw-h62v-c2w7"
+          ],
+          "PkgName": "pyyaml",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/pyyaml@3.12",
+            "UID": "8d08456ad253f5ac"
+          },
+          "InstalledVersion": "3.12",
+          "FixedVersion": "5.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-18342",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:8c8d8eca759dcbb60752b9e3c1625204f7e3c4ff77b36ee7179cafd97f5a520a",
+          "Title": "PyYAML: yaml.load() API could execute arbitrary code",
+          "Description": "In PyYAML before 5.1, the yaml.load() API could execute arbitrary code if used with untrusted data. The load() function has been deprecated in version 5.1 and the 'UnsafeLoader' has been introduced for backward compatibility with the function.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-502"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "oracle-oval": 3,
+            "photon": 4,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2017-18342",
+            "https://github.com/marshmallow-code/apispec/issues/278",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/pyyaml/PYSEC-2018-49.yaml",
+            "https://github.com/yaml/pyyaml",
+            "https://github.com/yaml/pyyaml/blob/master/CHANGES",
+            "https://github.com/yaml/pyyaml/commit/7b68405c81db889f83c32846462b238ccae5be80",
+            "https://github.com/yaml/pyyaml/issues/193",
+            "https://github.com/yaml/pyyaml/issues/207#issuecomment-472520007",
+            "https://github.com/yaml/pyyaml/pull/74",
+            "https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load%28input%29-Deprecation",
+            "https://linux.oracle.com/cve/CVE-2017-18342.html",
+            "https://linux.oracle.com/errata/ELSA-2022-9341.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JEX7IPV5P2QJITAMA5Z63GQCZA5I6NVZ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JEX7IPV5P2QJITAMA5Z63GQCZA5I6NVZ/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSQQMRUQSXBSUXLCRD3TSZYQ7SEZRKCE",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSQQMRUQSXBSUXLCRD3TSZYQ7SEZRKCE/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M6JCFGEIEOFMWWIXGHSELMKQDD4CV2BA",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/M6JCFGEIEOFMWWIXGHSELMKQDD4CV2BA/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-18342",
+            "https://security.gentoo.org/glsa/202003-45",
+            "https://www.cve.org/CVERecord?id=CVE-2017-18342"
+          ],
+          "PublishedDate": "2018-06-27T12:29:00.21Z",
+          "LastModifiedDate": "2026-06-17T01:12:39.04Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-14343",
+          "VendorIDs": [
+            "GHSA-8q59-q68h-6hv4"
+          ],
+          "PkgName": "pyyaml",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/pyyaml@3.12",
+            "UID": "8d08456ad253f5ac"
+          },
+          "InstalledVersion": "3.12",
+          "FixedVersion": "5.4",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-14343",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:755471f94d457ae636b282ae01c6c890ee79575fc0087c6770186d51c56ef96d",
+          "Title": "PyYAML: incomplete fix for CVE-2020-1747",
+          "Description": "A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "cbl-mariner": 4,
+            "ghsa": 4,
+            "nvd": 4,
+            "oracle-oval": 2,
+            "photon": 4,
+            "redhat": 2,
+            "rocky": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V40Vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "V3Score": 9.8,
+              "V40Score": 9.3
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 10,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2020-14343",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1860466",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14343",
+            "https://errata.almalinux.org/8/ALSA-2021-2583.html",
+            "https://errata.rockylinux.org/RLSA-2021:2583",
+            "https://github.com/SeldonIO/seldon-core/issues/2252",
+            "https://github.com/advisories/GHSA-8q59-q68h-6hv4",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/pyyaml/PYSEC-2021-142.yaml",
+            "https://github.com/yaml/pyyaml",
+            "https://github.com/yaml/pyyaml/commit/a001f2782501ad2d24986959f0239a354675f9dc",
+            "https://github.com/yaml/pyyaml/issues/420",
+            "https://github.com/yaml/pyyaml/issues/420#issuecomment-663673966",
+            "https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load%28input%29-Deprecation",
+            "https://linux.oracle.com/cve/CVE-2020-14343.html",
+            "https://linux.oracle.com/errata/ELSA-2021-2583.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-14343",
+            "https://pypi.org/project/PyYAML",
+            "https://ubuntu.com/security/notices/USN-4940-1",
+            "https://www.cve.org/CVERecord?id=CVE-2020-14343",
+            "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "https://www.oracle.com/security-alerts/cpujul2022.html"
+          ],
+          "PublishedDate": "2021-02-09T21:15:12.707Z",
+          "LastModifiedDate": "2026-06-17T02:54:34.453Z"
+        }
+      ]
+    }
+  ]
+}

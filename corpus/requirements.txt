@@ -1,0 +1,5 @@
+cryptography==2.3.0
+paramiko==2.4.1
+Jinja2==2.10.0
+pyyaml==3.12
+Werkzeug==0.15.0
