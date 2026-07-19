@@ -217,3 +217,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 venv/
+corpus/CVEfixes_v1.0.0/
+*.db
+*.sql
+*.sql.gz
+*.gz
+*.DS_Store
