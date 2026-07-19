@@ -4,7 +4,7 @@ import rego.v1
 
 # Risk-weighted gate
 # Composite score = (EPSS * 0.6) + (reachability * 0.4)
-# Build breaks only if composite score >= 0.4
+# Build breaks only if composite score >= 0.1
 
 # CWE categories classified as reachable
 # These sit at exposed entry points structurally
@@ -32,11 +32,11 @@ composite_score(finding) := score if {
     score := (finding.epss_score * 0.6) + (reachability_flag(finding.cwe_id) * 0.4)
 }
 
-# Violations — only block if composite score >= 0.4
+# Violations — only block if composite score >= 0.1
 violations contains msg if {
     some finding in input.findings
     score := composite_score(finding)
-    score >= 0.4
+    score >= 0.1
     msg := sprintf("BLOCKED: %s (CVE: %s, EPSS: %v, CWE: %s, Score: %v)", [
         finding.package,
         finding.cve_id,
