@@ -5,7 +5,7 @@
 ![Trivy](https://img.shields.io/badge/Trivy-0.69-blue?logo=aqua)
 ![Python](https://img.shields.io/badge/Python-3.11+-green?logo=python)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-passing-brightgreen?logo=githubactions)
-![Thesis](https://img.shields.io/badge/M.Sc._Thesis-SRH_Leipzig_2026-orange)
+
 
 > **M.Sc. Thesis Replication Package** — Ashok Venkatesh — SRH University of Applied Sciences Leipzig — 2026  
 > Supervisor: Prof. Dr. Klaus Dieter Schwarz
