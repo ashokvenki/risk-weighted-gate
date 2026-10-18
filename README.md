@@ -186,7 +186,7 @@ The GitHub Actions workflow (`.github/workflows/security-gate.yml`) runs both ga
 If you use this replication package in your research, please cite:
 
 ```bibtex
-@mastersthesis{venkatesh2026riskweighted,
+@{venkatesh2026riskweighted,
   author    = {Venkatesh, Ashok},
   title     = {Risk-Weighted Policy-as-Code Security Gates in CI/CD Pipelines},
   school    = {SRH University of Applied Sciences Leipzig},
