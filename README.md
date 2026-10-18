@@ -6,9 +6,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-green?logo=python)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-passing-brightgreen?logo=githubactions)
 
-
-> **M.Sc. Thesis Replication Package** — Ashok Venkatesh — SRH University of Applied Sciences Leipzig — 2026  
-> Supervisor: Prof. Dr. Klaus Dieter Schwarz
+ — Ashok Venkatesh — SRH University of Applied Sciences Leipzig — 2026  
 
 ---
 
@@ -193,7 +191,6 @@ If you use this replication package in your research, please cite:
   title     = {Risk-Weighted Policy-as-Code Security Gates in CI/CD Pipelines},
   school    = {SRH University of Applied Sciences Leipzig},
   year      = {2026},
-  type      = {M.Sc. Thesis},
   url       = {https://github.com/ashokvenki/risk-weighted-gate}
 }
 ```
